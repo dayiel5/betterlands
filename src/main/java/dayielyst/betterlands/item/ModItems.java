@@ -25,7 +25,8 @@ public class ModItems
 
     public static final TerracottaBlockSet.BlockItems
             STRETCHED_BRICKS = ModBlocks.STRETCHED_BRICKS.registerBlockItems(ITEMS),
-            PAVEMENTS = ModBlocks.PAVEMENTS.registerBlockItems(ITEMS);
+            PAVEMENTS = ModBlocks.PAVEMENTS.registerBlockItems(ITEMS),
+            TERRACOTTA_TILES = ModBlocks.TERRACOTTA_TILES.registerBlockItems(ITEMS);
     public static final DeferredItem<Item>
             JUNIPER_BERRIES = ITEMS.register(
                 "juniper_berries",
@@ -46,6 +47,9 @@ public class ModItems
             WILTING_BUSH = ITEMS.register(
                 "wilting_bush",
                 rl -> new BlockItem(ModBlocks.WILTING_BUSH.get(), new Item.Properties().setId(ResourceKey.create(Registries.ITEM, rl)))),
+            BRITTLEBUSH = ITEMS.register(
+                "brittlebush",
+                rl -> new BlockItem(ModBlocks.BRITTLEBUSH.get(), new Item.Properties().setId(ResourceKey.create(Registries.ITEM, rl)))),
             JUNIPER_LOG = ITEMS.register(
                 "juniper_log",
                 rl -> new BlockItem(ModBlocks.JUNIPER_LOG.get(), new Item.Properties().setId(ResourceKey.create(Registries.ITEM, rl)))),

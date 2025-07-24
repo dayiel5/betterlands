@@ -34,12 +34,14 @@ public class ModModelProvider extends ModelProvider
         {
             blockModels.createTrivialCube(ModBlocks.STRETCHED_BRICKS.get(color));
             blockModels.createTrivialCube(ModBlocks.PAVEMENTS.get(color));
+            blockModels.createTrivialCube(ModBlocks.TERRACOTTA_TILES.get(color));
         }
         blockModels.woodProvider(ModBlocks.JUNIPER_LOG.get()).logWithHorizontal(ModBlocks.JUNIPER_LOG.get()).wood(ModBlocks.JUNIPER_WOOD.get());
         blockModels.woodProvider(ModBlocks.STRIPPED_JUNIPER_LOG.get()).logWithHorizontal(ModBlocks.STRIPPED_JUNIPER_LOG.get()).wood(ModBlocks.STRIPPED_JUNIPER_WOOD.get());
         blockModels.createTintedLeaves(ModBlocks.JUNIPER_LEAVES.get(), TexturedModel.LEAVES, -12012264);
         blockModels.createTrivialCube(ModBlocks.JUNIPER_PLANKS.get());
         createPlantWithDefaultItem(ModBlocks.WILTING_BUSH.get(), blockModels);
+        createPlantWithDefaultItem(ModBlocks.BRITTLEBUSH.get(), blockModels);
 
         itemModels.generateFlatItem(ModItems.JUNIPER_BERRIES.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.GIN.get(), ModelTemplates.FLAT_ITEM);

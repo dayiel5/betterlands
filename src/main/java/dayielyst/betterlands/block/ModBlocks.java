@@ -9,6 +9,7 @@ import dayielyst.betterlands.block.custom.WiltingBushBlock;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.component.SuspiciousStewEffects;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -24,7 +25,8 @@ public class ModBlocks
 
     public static final TerracottaBlockSet
             STRETCHED_BRICKS = new TerracottaBlockSet("stretched_bricks", BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA), BLOCKS),
-            PAVEMENTS = new TerracottaBlockSet("pavement", BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA).speedFactor(1.15f), BLOCKS);
+            PAVEMENTS = new TerracottaBlockSet("pavement", BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA).speedFactor(1.15f), BLOCKS),
+            TERRACOTTA_TILES = new TerracottaBlockSet("terracotta_tiles", BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA), BLOCKS);
     public static final DeferredBlock<Block>
             JUNIPER_LOG = BLOCKS.register(
                 "juniper_log",
@@ -46,7 +48,9 @@ public class ModBlocks
                 rl -> new ModLeavesBlock(0F, ParticleTypes.CHERRY_LEAVES, BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_LEAVES).mapColor(MapColor.PLANT).randomTicks().sound(SoundType.AZALEA_LEAVES).noOcclusion().ignitedByLava().isValidSpawn(Blocks::ocelotOrParrot).pushReaction(PushReaction.DESTROY).setId(ResourceKey.create(Registries.BLOCK, rl)))),
             WILTING_BUSH = BLOCKS.register(
                 "wilting_bush",
-                rl -> new WiltingBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEAD_BUSH).mapColor(MapColor.PLANT).strength(0.2F).randomTicks().sound(SoundType.CROP).noOcclusion().pushReaction(PushReaction.DESTROY).setId(ResourceKey.create(Registries.BLOCK, rl))));
-
+                rl -> new WiltingBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DEAD_BUSH).mapColor(MapColor.PLANT).strength(0.2F).randomTicks().sound(SoundType.CROP).noOcclusion().pushReaction(PushReaction.DESTROY).setId(ResourceKey.create(Registries.BLOCK, rl)))),
+            BRITTLEBUSH = BLOCKS.register(
+                "brittlebush",
+                rl -> new FlowerBlock(SuspiciousStewEffects.EMPTY, BlockBehaviour.Properties.ofFullCopy(Blocks.DANDELION).mapColor(MapColor.COLOR_YELLOW).setId(ResourceKey.create(Registries.BLOCK, rl))));
     public static void register(IEventBus eventBus) {BLOCKS.register(eventBus);}
 }

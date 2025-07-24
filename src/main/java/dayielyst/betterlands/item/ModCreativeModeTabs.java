@@ -1,6 +1,7 @@
 package dayielyst.betterlands.item;
 
 import dayielyst.betterlands.Betterlands;
+import dayielyst.betterlands.block.custom.TerracottaBlockSet;
 import dayielyst.betterlands.util.TerracottaColors;
 
 import net.minecraft.core.registries.Registries;
@@ -36,14 +37,18 @@ public class ModCreativeModeTabs
                     .title(Component.translatable("creativetab.betterlands.blocks"))
                     .displayItems((p, o) -> {
                         o.accept(ModItems.WILTING_BUSH);
-                        for(DeferredItem<Item> item : ModItems.STRETCHED_BRICKS.getEntries())
-                        {
-                            o.accept(item);
-                        }
-                        for(DeferredItem<Item> item : ModItems.PAVEMENTS.getEntries())
-                        {
-                            o.accept(item);
-                        }
+                        o.accept(ModItems.BRITTLEBUSH);
+                        acceptBlockItems(ModItems.STRETCHED_BRICKS, o);
+                        acceptBlockItems(ModItems.PAVEMENTS, o);
+                        acceptBlockItems(ModItems.TERRACOTTA_TILES, o);
+//                        for(DeferredItem<Item> item : ModItems.STRETCHED_BRICKS.getEntries())
+//                        {
+//                            o.accept(item);
+//                        }
+//                        for(DeferredItem<Item> item : ModItems.PAVEMENTS.getEntries())
+//                        {
+//                            o.accept(item);
+//                        }
                         o.accept(ModItems.JUNIPER_LOG);
                         o.accept(ModItems.JUNIPER_WOOD);
                         o.accept(ModItems.STRIPPED_JUNIPER_LOG);
@@ -55,5 +60,10 @@ public class ModCreativeModeTabs
     public static void register(IEventBus eventBus)
     {
         CREATIVE_MODE_TAB.register(eventBus);
+    }
+
+    public static void acceptBlockItems(TerracottaBlockSet.BlockItems items, CreativeModeTab.Output output)
+    {
+        for(DeferredItem<Item> item : items.getEntries()) output.accept(item);
     }
 }
