@@ -50,6 +50,11 @@ public class ModModelProvider extends ModelProvider
         createJuniperBranch(blockModels);
         itemModels.generateFlatItem(ModItems.JUNIPER_BERRIES.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.GIN.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.FOSSILIZED_SKULL.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.FOSSILIZED_RIBS.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.FOSSILIZED_COXA.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.FOSSILIZED_CLAWS.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.LARGE_HORN.get(), ModelTemplates.FLAT_ITEM);
     }
 
     private static void createPlant(Block plant, BlockModelGenerators generator)

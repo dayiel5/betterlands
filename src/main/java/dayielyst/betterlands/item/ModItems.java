@@ -44,6 +44,21 @@ public class ModItems
                     .stacksTo(16)
                     .useItemDescriptionPrefix()
                     .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.parse("betterlands:gin"))))),
+            FOSSILIZED_SKULL = ITEMS.register(
+                "fossilized_skull",
+                rl -> new Item(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, rl)))),
+            FOSSILIZED_RIBS = ITEMS.register(
+                "fossilized_ribs",
+                rl -> new Item(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, rl)))),
+            FOSSILIZED_COXA = ITEMS.register(
+                "fossilized_coxa",
+                rl -> new Item(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, rl)))),
+            FOSSILIZED_CLAWS = ITEMS.register(
+                "fossilized_claws",
+                rl -> new Item(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, rl)))),
+            LARGE_HORN = ITEMS.register(
+                "large_horn",
+                rl -> new Item(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, rl)))),
             WILTING_BUSH = ITEMS.register(
                 "wilting_bush",
                 rl -> new BlockItem(ModBlocks.WILTING_BUSH.get(), new Item.Properties().setId(ResourceKey.create(Registries.ITEM, rl)))),

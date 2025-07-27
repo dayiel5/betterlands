@@ -29,6 +29,11 @@ public class ModCreativeModeTabs
                     .displayItems((p, o) -> {
                         o.accept(ModItems.JUNIPER_BERRIES);
                         o.accept(ModItems.GIN);
+                        o.accept(ModItems.FOSSILIZED_SKULL);
+                        o.accept(ModItems.FOSSILIZED_RIBS);
+                        o.accept(ModItems.FOSSILIZED_COXA);
+                        o.accept(ModItems.FOSSILIZED_CLAWS);
+                        o.accept(ModItems.LARGE_HORN);
                     }).build()),
             BETTERLANDS_BLOCKS_TAB = CREATIVE_MODE_TAB.register(
                 "blocks_tab",
