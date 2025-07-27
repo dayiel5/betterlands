@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "betterlands:block/stripped_juniper_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "betterlands:block/stripped_juniper_log"
+    },
+    "axis=z": {
+      "model": "betterlands:block/stripped_juniper_log_horizontal",
+      "x": 90
+    }
+  }
+}
