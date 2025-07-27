@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "betterlands:block/juniper_log_top",
-    "side": "betterlands:block/juniper_log"
-  }
-}

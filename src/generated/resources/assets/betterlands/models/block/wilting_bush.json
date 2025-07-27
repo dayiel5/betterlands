@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "ambientocclusion": false,
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "cross": "betterlands:block/wilting_bush"
-  }
-}
