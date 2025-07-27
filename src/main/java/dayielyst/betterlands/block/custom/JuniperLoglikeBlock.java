@@ -16,12 +16,12 @@ import net.neoforged.neoforge.common.ItemAbility;
 
 import javax.annotation.Nullable;
 
-public class ModLoglikeBlock extends RotatedPillarBlock
+public class JuniperLoglikeBlock extends RotatedPillarBlock
 {
     public static final EnumProperty<Direction> FACING = BlockStateProperties.FACING;
     public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 
-    public ModLoglikeBlock(Properties properties)
+    public JuniperLoglikeBlock(Properties properties)
     {
         super(properties);
         this.registerDefaultState(getStateDefinition().any().setValue(FACING, Direction.UP));
