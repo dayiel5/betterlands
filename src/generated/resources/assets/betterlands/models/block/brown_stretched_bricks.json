@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "betterlands:block/brown_stretched_bricks"
-  }
-}
